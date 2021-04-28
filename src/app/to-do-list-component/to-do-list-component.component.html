@@ -1,0 +1,14 @@
+<p>My Tasks to day</p>
+<ul>
+    <!-- <li>{{ tasks }}</li> -->
+    <li *ngFor="let task of tasks">{{ task }}
+        <button (click)="remove(task)">x</button>
+    </li> 
+</ul>
+<h2>Task:</h2>
+<form (submit) ="add(task.value)">
+    <div>
+        <input type="text" #task>
+    </div>
+    <button>Add</button>
+</form>
